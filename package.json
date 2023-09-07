@@ -1,0 +1,17 @@
+{
+    "name": "unity-advanced-playerprefs",
+    "version": "0.1.0",
+    "displayName": "Unity Advanced PlayerPrefs",
+    "description": "A very simple json-based playerprefs",
+    "unity": "2019.1",
+    "dependencies": {
+      "com.unity.textmeshpro": "3.0.6",
+      "com.unity.modules.jsonserialize": "1.0.0"
+    },
+    "author": {
+        "name": "Ertan Turan",
+        "email": "ertanturan@outlook.com"
+    },
+    "scopedRegistries": [
+    ]
+}
