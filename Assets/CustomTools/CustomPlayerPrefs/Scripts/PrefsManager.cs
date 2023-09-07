@@ -98,6 +98,20 @@ namespace CustomTools.CustomPlayerPrefs.Scripts
             return -1;
         }
 
+        public static bool ContainsIntPrefs(this string key)
+        {
+            if (_Prefs.IntegerPrefs.Any(a => a.Key == key))
+            {
+                IntegerPref intPref = _Prefs.IntegerPrefs.Where(a => a.Key == key).ToList()[0];
+                if (intPref != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         #endregion
 
         #region Float
@@ -135,6 +149,19 @@ namespace CustomTools.CustomPlayerPrefs.Scripts
             return -1f;
         }
 
+        public static bool ContainsFloatPrefs(this string key)
+        {
+            if (_Prefs.FloatPrefs.Any(a => a.Key == key))
+            {
+                FloatPref floatPref = _Prefs.FloatPrefs.Where(a => a.Key == key).ToList()[0];
+                if (floatPref != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         #endregion
 
         #region String
@@ -170,6 +197,20 @@ namespace CustomTools.CustomPlayerPrefs.Scripts
 
             Debug.LogWarning("No such value found !");
             return "";
+        }
+
+        public static bool ContainsStringPrefs(this string key)
+        {
+            if (_Prefs.StringPrefs.Any(a => a.Key == key))
+            {
+                StringPref stringPref = _Prefs.StringPrefs.Where(a => a.Key == key).ToList()[0];
+                if (stringPref != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         #endregion
@@ -209,6 +250,20 @@ namespace CustomTools.CustomPlayerPrefs.Scripts
             return default;
         }
 
+        public static bool ContainsVector3Prefs(this string key)
+        {
+            if (_Prefs.Vector3Prefs.Any(a => a.Key == key))
+            {
+                Vector3Pref vector3Pref = _Prefs.Vector3Prefs.Where(a => a.Key == key).ToList()[0];
+                if (vector3Pref != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         #endregion
 
         #region Quaternion
@@ -244,6 +299,20 @@ namespace CustomTools.CustomPlayerPrefs.Scripts
 
             Debug.LogWarning("No such value found !");
             return default;
+        }
+
+        public static bool ContainsQuaternionPrefs(this string key)
+        {
+            if (_Prefs.QuaternionPrefs.Any(a => a.Key == key))
+            {
+                QuaternionPref quaternionPref = _Prefs.QuaternionPrefs.Where(a => a.Key == key).ToList()[0];
+                if (quaternionPref != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         #endregion
